@@ -9,9 +9,7 @@ import {
   TypingIndicator,
 } from "@chatscope/chat-ui-kit-react";
 
-
-const API_KEY = import.meta.env.VITE_Open_AI_Key;
-
+const API_KEY = "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";
 
 const systemMessage = {
   role: "system",
@@ -97,8 +95,16 @@ function App() {
   }
 
   return (
-    <div className="App" style={{display: "flex", justifyContent: "center", alignItems: "center", textAlign: "right"}}>
-      <div style={{height: "95vh"}}>
+    <div
+      className="App"
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        textAlign: "right",
+      }}
+    >
+      <div style={{ height: "95vh" }}>
         <MainContainer>
           <ChatContainer>
             <MessageList
