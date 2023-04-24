@@ -73,7 +73,7 @@ function App() {
     await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST",
       headers: {
-        Authorization: "Bearer " + API_KEY,
+        Authorization: "Bearer " + VITE_Open_AI_Key ,
         "Content-Type": "application/json",
       },
       body: JSON.stringify(apiRequestBody),
