@@ -1,12 +1,10 @@
 import { useState, useEffect } from "react";
 import logo from "./assets/logo.png";
 import "@chatscope/chat-ui-kit-styles/dist/default/styles.min.css";
-import {
-  Loader
-} from "@chatscope/chat-ui-kit-react";
-import Header from "./sections/Header"
-import Body from "./sections/Body"
-// 
+import { Loader } from "@chatscope/chat-ui-kit-react";
+import Header from "./sections/Header";
+import Body from "./sections/Body";
+//
 
 function App() {
   const [showParagraph, setShowParagraph] = useState(true);
@@ -23,7 +21,7 @@ function App() {
   return (
     <>
       {showParagraph && (
-        <div>
+        <div style={{background: "#e0e0e0", height: "100vh"}}>
           <div
             style={{
               height: "80vh",
@@ -41,16 +39,27 @@ function App() {
           >
             <img src={logo} style={{ width: "300px" }} alt="logo" />
           </div>
-          <div style={{ textAlign: "center", display: "flex", justifyContent: "center", alignItems: "center"}}>
-            <div style={{margin: "0 5px"}}>جاري تحميل الموقع</div>
+          <div
+            style={{
+              textAlign: "center",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <div style={{ margin: "0 5px" }}>جاري تحميل الموقع</div>
             <Loader />
           </div>
         </div>
       )}
       {showTopContent && (
-        <div className="Home">
-          <Header />
-          <Body />
+        <div className="top-content">
+          <div className="content-wrapper">
+            <div className="card-wrapper">
+              <Header />
+              <Body />
+            </div>
+          </div>
         </div>
       )}
     </>
